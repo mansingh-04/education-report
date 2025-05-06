@@ -1,35 +1,33 @@
 import SectionHeader from "../../components/SectionHeader"
 
 export default function SystemArchetypes() {
-  // Example archetypes - replace with your actual identified archetypes
   const archetypes = [
     {
-      name: "Fixes that Fail",
-      description:
-        "Short-term solutions that create unintended consequences, making the original problem worse in the long run.",
-      example:
-        "Standardized testing to improve accountability that leads to teaching to the test and reduced learning quality.",
-      impact: "Creates cycles of policy interventions that address symptoms rather than root causes.",
-    },
-    {
       name: "Shifting the Burden",
-      description: "Reliance on symptomatic solutions rather than addressing fundamental issues.",
+      description:
+        "This archetype reveals a reliance on short-term, surface-level solutions to address complex, deep-rooted problems.",
       example:
-        "Using private tutoring to compensate for classroom teaching deficiencies instead of improving school instruction.",
-      impact: "Weakens the system's ability to solve problems independently over time.",
+        "Distributing digital devices and internet connectivity to address education challenges, without addressing underlying issues like teacher training or curriculum alignment.",
+      impact:
+        "Diverts attention and resources away from systemic reforms, making the system dependent on technology as a quick fix, while long-term issues persist.",
     },
     {
-      name: "Success to the Successful",
-      description: "Resources flow to already successful elements of the system, creating growing inequality.",
+      name: "Limits to Success",
+      description:
+        "Initial digital interventions show promise, but systemic constraints eventually hinder sustained progress.",
       example:
-        "Top-performing schools receive more funding and resources, while struggling schools fall further behind.",
-      impact: "Perpetuates and amplifies educational inequality across regions and demographics.",
+        "Improved digital engagement initially seen in schools, but progress stalls due to limited digital literacy, poor infrastructure, and lack of contextual content.",
+      impact:
+        "Further investment yields diminishing returns, leading to stakeholder frustration and weakening support for digital learning over time.",
     },
   ]
 
   return (
     <div className="container">
-      <SectionHeader title="System Archetypes" description="Recurring patterns identified in the education system" />
+      <SectionHeader
+        title="System Archetypes"
+        description="Recurring patterns identified in the education system"
+      />
 
       <div className="card">
         <h2>Identified Archetypes</h2>
@@ -58,7 +56,12 @@ export default function SystemArchetypes() {
 
         <div className="highlight-box purple">
           <h3>Archetype Interactions</h3>
-          <p>[Explanation of how these archetypes interact with each other in the education system]</p>
+          <p>
+            These archetypes reinforce each other: the “Shifting the Burden” dynamic weakens the system’s resilience,
+            while “Limits to Success” discourages continued innovation and stakeholder trust. Together, they
+            demonstrate why surface-level digital interventions alone cannot produce sustainable change without
+            addressing structural barriers in the education system.
+          </p>
         </div>
       </div>
     </div>

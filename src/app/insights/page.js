@@ -2,32 +2,31 @@ import SectionHeader from "../../components/SectionHeader"
 import { Lightbulb } from "lucide-react"
 
 export default function AdditionalInsights() {
-  // Example insights - replace with your actual insights
   const insights = [
     {
-      title: "Unexpected Connections",
+      title: "Digital Literacy Gap",
       description:
-        "We discovered surprising relationships between teacher autonomy and student innovation that weren't initially apparent.",
+        "A significant divide exists in digital literacy between urban and rural educators and students, limiting effective technology use in rural classrooms.",
     },
     {
-      title: "Delayed Effects",
+      title: "Parental and Community Involvement",
       description:
-        "Many educational interventions show significant time delays before producing measurable outcomes, complicating evaluation.",
+        "Low awareness among parents, especially in low-income households, hinders their ability to support digital learning at home.",
     },
     {
-      title: "Regional Variations",
+      title: "Cultural and Linguistic Barriers",
       description:
-        "The same feedback loops operate differently across urban and rural educational contexts due to resource disparities.",
+        "The dominance of English-centric digital content reduces accessibility and engagement for students in rural and tribal regions.",
     },
     {
-      title: "Technology Adoption Patterns",
+      title: "Broader Societal Issues",
       description:
-        "Educational technology implementation follows predictable patterns that can be leveraged for more effective rollouts.",
+        "Factors like poverty and gender inequality limit the reach and impact of digital education, particularly for girls in rural areas.",
     },
     {
-      title: "Stakeholder Perception Gaps",
+      title: "Intersection with Development Goals",
       description:
-        "We found significant differences in how various stakeholders perceive the same educational challenges.",
+        "Digital education initiatives are deeply intertwined with broader goals like electrification, poverty reduction, and gender equity.",
     },
   ]
 
@@ -59,9 +58,9 @@ export default function AdditionalInsights() {
           <h3>Emerging Questions</h3>
           <p>Our analysis has raised several important questions for future research:</p>
           <ul>
-            <li>[Your emerging question #1]</li>
-            <li>[Your emerging question #2]</li>
-            <li>[Your emerging question #3]</li>
+            <li>How can digital literacy training be scaled equitably across regions?</li>
+            <li>What role can local communities play in sustaining digital learning initiatives?</li>
+            <li>How can educational content be better localized to improve relevance and accessibility?</li>
           </ul>
         </div>
       </div>

@@ -1,23 +1,22 @@
+"use client"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "../components/Navbar"
 import Sidebar from "../components/Sidebar"
+import { useState } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: "Education Feedback Loop Analysis",
-  description: "A comprehensive analysis of feedback loops in education",
-}
-
 export default function RootLayout({ children }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="layout-container">
-          <Sidebar />
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
           <div className="main-content">
-            <Navbar />
+            <Navbar onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
             <main className="content-area">{children}</main>
           </div>
         </div>

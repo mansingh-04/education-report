@@ -16,9 +16,9 @@ export default function EventPatternStructure() {
             <h3>Event Level</h3>
             <p>Major symptoms and surface issues observed in the education system:</p>
             <ul>
-              <li>[Your identified event #1]</li>
-              <li>[Your identified event #2]</li>
-              <li>[Your identified event #3]</li>
+              <li>Increased availability of digital devices and internet connectivity in schools.</li>
+              <li>Persistent underperformance in learning assessments like ASER and PISA.</li>
+              <li>Widening educational inequities between urban and rural schools, with rural students facing challenges in using digital tools effectively.</li>
             </ul>
           </div>
 
@@ -26,9 +26,9 @@ export default function EventPatternStructure() {
             <h3>Pattern Level</h3>
             <p>Recurring trends and behaviors observed over time:</p>
             <ul>
-              <li>[Your identified pattern #1]</li>
-              <li>[Your identified pattern #2]</li>
-              <li>[Your identified pattern #3]</li>
+              <li>Little improvement in critical skills like reading comprehension or mathematical proficiency despite widespread digital tool deployment.</li>
+              <li>Low digital literacy among teachers, especially in rural areas, leading to inconsistent technology integration in classrooms.</li>
+              <li>High dropout rates among marginalized communities, exacerbating socio-economic and educational inequities.</li>
             </ul>
           </div>
 
@@ -36,9 +36,9 @@ export default function EventPatternStructure() {
             <h3>Structure Level</h3>
             <p>Deeper system structures — incentives, norms, and processes:</p>
             <ul>
-              <li>[Your identified structure #1]</li>
-              <li>[Your identified structure #2]</li>
-              <li>[Your identified structure #3]</li>
+              <li>Incentives are often misaligned with actual learning outcomes, focusing on quantitative measures like the number of devices distributed.</li>
+              <li>Access to digital tools remains inequitable, with socio-economic divides acting as significant barriers.</li>
+              <li>Resistance to adopting technology-driven pedagogies due to entrenched traditional teaching methods and cultural norms.</li>
             </ul>
           </div>
         </div>
@@ -58,19 +58,18 @@ export default function EventPatternStructure() {
               </tr>
             </thead>
             <tbody>
-              {/* Replace with your actual interventions */}
               <tr>
-                <td>[Intervention 1]</td>
+                <td>Distribution of Tablets</td>
                 <td>Event</td>
                 <td>Low</td>
               </tr>
               <tr>
-                <td>[Intervention 2]</td>
+                <td>Teacher Training Programs</td>
                 <td>Pattern</td>
                 <td>Medium</td>
               </tr>
               <tr>
-                <td>[Intervention 3]</td>
+                <td>Infrastructure Investment in Rural Areas</td>
                 <td>Structure</td>
                 <td>High</td>
               </tr>
@@ -81,18 +80,17 @@ export default function EventPatternStructure() {
         <div className="redesign-section">
           <h3>Proposed Structural Redesigns</h3>
           <div className="redesign-list">
-            {/* Replace with your actual proposed redesigns */}
             <div className="redesign-item">
-              <h4>Redesign 1: [Title]</h4>
-              <p>[Description of your proposed structural redesign]</p>
+              <h4>Redesign 1: Teacher Empowerment</h4>
+              <p>Establish sustained and comprehensive digital literacy training for teachers to ensure effective integration of technology in pedagogy.</p>
             </div>
             <div className="redesign-item">
-              <h4>Redesign 2: [Title]</h4>
-              <p>[Description of your proposed structural redesign]</p>
+              <h4>Redesign 2: Localised Content Development</h4>
+              <p>Create culturally relevant and linguistically diverse digital content tailored to regional and community-specific needs.</p>
             </div>
             <div className="redesign-item">
-              <h4>Redesign 3: [Title]</h4>
-              <p>[Description of your proposed structural redesign]</p>
+              <h4>Redesign 3: Infrastructure Investment</h4>
+              <p>Develop reliable infrastructure, including uninterrupted power supply and robust internet connectivity, particularly in rural and underserved areas.</p>
             </div>
           </div>
         </div>

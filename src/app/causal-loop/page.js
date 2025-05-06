@@ -1,14 +1,22 @@
 import SectionHeader from "../../components/SectionHeader"
 
 export default function CausalLoop() {
-  // Example variables - replace with your actual variables
   const variables = [
-    { name: "Student Engagement", definition: "Level of student participation and interest in learning activities" },
-    { name: "Teacher Motivation", definition: "Level of enthusiasm and commitment teachers have toward their work" },
-    { name: "Resource Allocation", definition: "Distribution of educational resources across schools and regions" },
-    { name: "Learning Outcomes", definition: "Measurable results of educational activities" },
-    { name: "Parental Involvement", definition: "Degree to which parents participate in their children's education" },
-    { name: "Policy Implementation", definition: "Effectiveness of educational policy execution at various levels" },
+    { name: "Access to Digital Devices", definition: "Availability of smartphones, tablets, or computers to students at home or school." },
+    { name: "Internet Connectivity", definition: "Quality, speed, and consistency of internet access for online learning." },
+    { name: "Student Engagement", definition: "The level of attention, interest, and active participation a student shows in learning activities." },
+    { name: "Learning Outcomes", definition: "Improvements in academic performance, such as literacy, numeracy, and conceptual understanding." },
+    { name: "Teacher Digital Preparedness", definition: "The extent to which teachers are trained and confident in using digital tools for teaching." },
+    { name: "Parental Support", definition: "The involvement of parents or guardians in facilitating and supervising children's learning, especially online." },
+    { name: "Content Relevance", definition: "How well the digital educational content matches the local curriculum, language, and student context." },
+    { name: "Screen Time Quality", definition: "The amount of time spent on educational versus non-educational activities on digital devices." },
+    { name: "Motivation to Learn", definition: "Internal drive or enthusiasm of students to participate and persist in learning." },
+    { name: "Digital Literacy", definition: "The ability of students and teachers to effectively use digital tools for learning purposes." },
+    { name: "Distraction from Devices", definition: "The extent to which students get sidetracked by non-learning activities (e.g., games, social media)." },
+    { name: "Language Accessibility", definition: "Whether digital content is available in the local language(s) understood by students." },
+    { name: "Platform Feedback Mechanism", definition: "The ability of learning platforms to provide real-time feedback and adapt content based on learner progress." },
+    { name: "Household Learning Environment", definition: "The overall supportiveness of the home setting for digital learning, including space, quiet, and supervision." },
+    { name: "Policy and Institutional Support", definition: "Government or school-level policies that enable effective integration of digital tools in education." },
   ]
 
   return (
@@ -22,10 +30,18 @@ export default function CausalLoop() {
         <h2>System Visualization</h2>
 
         <div className="diagram-container">
-          {/* Replace with your actual CLD diagram */}
-          <div className="diagram-placeholder">
-            <p>Your Causal Loop Diagram will be displayed here</p>
-          </div>
+          <img 
+            src="/CLD.png" 
+            alt="Causal Loop Diagram showing relationships between education system variables"
+            className="causal-loop-diagram"
+            style={{
+              width: '100%',
+              maxWidth: '1200px',
+              height: 'auto',
+              borderRadius: 'var(--border-radius-lg)',
+              boxShadow: 'var(--shadow-md)'
+            }}
+          />
         </div>
 
         <h2>Variables and Definitions</h2>
@@ -53,15 +69,14 @@ export default function CausalLoop() {
         <h2>Key Feedback Loops</h2>
         <p>[Description of the most significant feedback loops identified in your analysis]</p>
 
-        {/* Example of a feedback loop explanation - replace with your actual content */}
         <div className="feedback-loop blue">
-          <h3>Reinforcing Loop: Teacher Motivation → Learning Outcomes</h3>
-          <p>[Explanation of how this feedback loop works and its implications]</p>
+          <h3>Reinforcing Loop: Teacher Digital Preparedness → Student Engagement → Learning Outcomes</h3>
+          <p>[Explanation of how this reinforcing loop improves learning outcomes through better teacher integration of EdTech]</p>
         </div>
 
         <div className="feedback-loop green">
-          <h3>Balancing Loop: Resource Allocation → Educational Inequality</h3>
-          <p>[Explanation of how this feedback loop works and its implications]</p>
+          <h3>Balancing Loop: Screen Time Quality → Distraction from Devices → Learning Outcomes</h3>
+          <p>[Explanation of how excessive or poor-quality screen time negatively impacts outcomes, requiring balance]</p>
         </div>
       </div>
     </div>

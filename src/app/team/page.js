@@ -1,39 +1,37 @@
 "use client"
 import SectionHeader from "../../components/SectionHeader"
-import Tilt from "react-parallax-tilt"
 
 export default function TeamMembers() {
-  // Replace with your actual team members
   const teamMembers = [
     {
-      name: "Team Member 1",
-      enrollmentNumber: "ENROLLMENT123",
+      name: "Ipshita Anand",
+      enrollmentNumber: "2402110012",
       role: "Team Lead",
-      bio: "Brief description about team member 1's contribution to the project.",
+      bio: "Led coordination and strategic direction of the project, ensured timely progress, and consolidated the final report.",
     },
     {
-      name: "Team Member 2",
-      enrollmentNumber: "ENROLLMENT456",
-      role: "Research Analyst",
-      bio: "Brief description about team member 2's contribution to the project.",
+      name: "Kulpreet Kaur",
+      enrollmentNumber: "2404310009",
+      role: "Concept Designer & Report Contributor",
+      bio: "Drafted the initial versions of the Causal Loop and Stock & Flow Diagrams on paper, and contributed significantly to compiling and structuring the team report.",
     },
     {
-      name: "Team Member 3",
-      enrollmentNumber: "ENROLLMENT789",
-      role: "Systems Modeler",
-      bio: "Brief description about team member 3's contribution to the project.",
+      name: "Manpreet Singh",
+      enrollmentNumber: "2401010263",
+      role: "Web Developer",
+      bio: "Designed and built the official project website, ensuring effective presentation of research, visuals, and interactivity.",
     },
     {
-      name: "Team Member 4",
-      enrollmentNumber: "ENROLLMENT101",
+      name: "Hardik Hathwal",
+      enrollmentNumber: "2401010176",
       role: "Data Analyst",
-      bio: "Brief description about team member 4's contribution to the project.",
+      bio: "Analyzed datasets from ASER, PISA, and UNESCO reports to extract meaningful trends and correlations.",
     },
     {
-      name: "Team Member 5",
-      enrollmentNumber: "ENROLLMENT202",
-      role: "Documentation Specialist",
-      bio: "Brief description about team member 5's contribution to the project.",
+      name: "Syed Darain Qamar",
+      enrollmentNumber: "2401010472",
+      role: "Systems Modeler",
+      bio: "Digitally created the Causal Loop Diagram (CLD), Stock & Flow Diagram using Vensim, and developed an interactive bot to simulate dynamics.",
     },
   ]
 
@@ -41,22 +39,22 @@ export default function TeamMembers() {
     <div className="container">
       <SectionHeader title="Our Team" description="The people behind this research and analysis" />
 
-      <Tilt glareEnable={true} glareMaxOpacity={0.15} glareColor="#fff" glarePosition="all" scale={1.04} transitionSpeed={1200}>
         <div className="card">
           <h2>Team Name</h2>
-          <p>[Your Team Name]</p>
+          <p>THE LEVERAGE QUINTET</p>
 
           <h2>Problem Domain</h2>
-          <p>[Your Problem Domain]</p>
+          <p>Education</p>
+
+          <h2>Problem Statement</h2>
+          <p>(5.1) The Screen Time vs Learning Time Dilemma</p>
         </div>
-      </Tilt>
 
       <div className="team-grid">
         {teamMembers.map((member, index) => (
-          <Tilt key={index} glareEnable={true} glareMaxOpacity={0.15} glareColor="#fff" glarePosition="all" scale={1.04} transitionSpeed={1200}>
-            <div className="team-member">
+          <div key={index} className="team-member-card">
+            <div className="team-member-content">
               <div className="member-avatar">
-                {/* Replace with actual team member photos if available */}
                 <div className="avatar-placeholder">{member.name.charAt(0)}</div>
               </div>
               <div className="member-info">
@@ -66,24 +64,24 @@ export default function TeamMembers() {
                 <p className="bio">{member.bio}</p>
               </div>
             </div>
-          </Tilt>
+          </div>
         ))}
       </div>
 
-      <Tilt glareEnable={true} glareMaxOpacity={0.15} glareColor="#fff" glarePosition="all" scale={1.04} transitionSpeed={1200}>
         <div className="card">
           <h2>References</h2>
           <p>List of all the data sources, reports, articles, tools, or APIs consulted during our research:</p>
 
           <ol className="references-list">
-            <li>[Your reference #1]</li>
-            <li>[Your reference #2]</li>
-            <li>[Your reference #3]</li>
-            <li>[Your reference #4]</li>
-            <li>[Your reference #5]</li>
+            <li>ASER Reports (Annual Status of Education Report)</li>
+            <li>PISA (Programme for International Student Assessment)</li>
+            <li>National Education Policy (NEP) 2020</li>
+            <li>UNESCO and UNICEF reports on EdTech in developing countries</li>
+            <li>Brookings Institution and World Bank research on the digital divide</li>
+            <li>Systems thinking tools such as Causal Loop Diagrams (CLDs)</li>
+            <li>Modeling tools like Vensim for systemic analysis</li>
           </ol>
         </div>
-      </Tilt>
     </div>
   )
 }

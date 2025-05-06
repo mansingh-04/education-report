@@ -2,18 +2,17 @@ import SectionHeader from "../../components/SectionHeader"
 import { CheckCircle } from "lucide-react"
 
 export default function Process() {
-  // Example process steps - replace with your actual process
   const processSteps = [
-    "Identified the problem domain in education",
-    "Conducted literature review on existing research",
-    "Interviewed stakeholders including teachers, students and administrators",
-    "Collected and analyzed relevant data",
-    "Created initial causal loop diagrams",
-    "Refined models based on feedback",
-    "Identified key leverage points",
-    "Analyzed system archetypes",
-    "Conducted Event-Pattern-Structure analysis",
-    "Compiled findings and recommendations",
+    "Defined the core problem of poor learning outcomes despite digital access",
+    "Reviewed research papers and policy reports on EdTech and learning",
+    "Engaged with teachers, students, and administrators for real-world insights",
+    "Gathered and analyzed data on digital access and academic performance",
+    "Developed initial causal loop diagrams (CLDs) to map system behavior",
+    "Refined models through iterative feedback and team discussions",
+    "Identified systemic leverage points using Meadows’ framework",
+    "Explored system archetypes like shifting the burden and fixes that fail",
+    "Performed Event-Pattern-Structure (EPS) analysis to unpack root causes",
+    "Proposed targeted interventions and compiled findings into final visuals"
   ]
 
   return (
