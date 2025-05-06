@@ -35,7 +35,9 @@ export default function Navbar({ onMenuClick }) {
         </div>
 
         <div className="navbar-title earthy-navbar-title">
-          <h1>Education Feedback Loop Analysis</h1>
+          <h1>
+            <span className="navbar-title-text">Education Feedback Loop Analysis</span>
+          </h1>
         </div>
 
         <div className="navbar-actions">
