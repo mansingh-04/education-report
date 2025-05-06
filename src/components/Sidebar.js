@@ -57,6 +57,7 @@ export default function Sidebar({ isOpen, onClose }) {
                   <Link
                     href={item.href}
                     className={`${styles["creative-nav-link"]}${isActive ? ` ${styles["creative-active-link"]}` : ""}`}
+                    onClick={() => isMobile && onClose()}
                   >
                     <item.icon className={styles["creative-nav-icon"]} />
                     <span className={styles["creative-nav-text"]}>{item.name}</span>

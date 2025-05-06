@@ -144,10 +144,40 @@ ol {
 }
 
 @media (max-width: 768px) {
+  /* Make more space for the fixed mobile header */
   .main-content {
     margin-left: 0;
     width: 100vw;
-    padding-top: 1rem;
+    padding-top: 60px !important; /* Slightly more space */
+  }
+
+  /* Better styling for menu button */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+  }
+
+  .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  .menu-button:focus {
+    outline: none;
+  }
+
+  .menu-button .icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   /* Force containers to full width */
@@ -161,7 +191,7 @@ ol {
   }
 
   .content-area {
-    padding: 8px 0 !important;
+    padding: 15px 0 8px 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -266,6 +296,7 @@ ol {
   /* Other mobile styles */
   .section-header {
     margin-bottom: var(--spacing-3);
+    padding-top: 10px;
     padding-left: var(--spacing-1);
     padding-right: var(--spacing-1);
   }
@@ -397,7 +428,7 @@ ol {
   
   /* Style for team button specifically */
   a[href="/team"] {
-    display: none;
+    display: inline-block;
   }
 
   /* Center the title now that buttons are gone */
@@ -417,6 +448,44 @@ ol {
   .navbar-container {
     justify-content: space-between;
     padding: 0.5rem var(--spacing-2);
+  }
+
+  /* Force display of Home link in sidebar */
+  a[href="/"] {
+    display: inline-block !important;
+  }
+  
+  /* Enhance the menu button to make it more noticeable */
+  .menu-button {
+    color: var(--color-primary);
+    border-radius: 4px;
+    padding: 6px;
+    margin-right: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  .menu-button:hover, 
+  .menu-button:active {
+    background-color: rgba(37, 99, 235, 0.1);
+  }
+  
+  /* Make the sidebar navigation more visible */
+  .sidebar {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Style the menu button text */
+  .menu-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .menu-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-left: 4px;
+    color: var(--color-primary);
   }
 }
 
@@ -1334,7 +1403,7 @@ input:focus, textarea:focus, select:focus {
   
   /* Style for team button specifically */
   a[href="/team"] {
-    display: none;
+    display: inline-block;
   }
 
   .earthy-navbar-container {
@@ -1455,5 +1524,58 @@ input:focus, textarea:focus, select:focus {
 @media (max-width: 900px) {
   .earthy-navbar {
     left: 0;
+  }
+}
+
+/* Home section spacing improvements */
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: var(--spacing-4);
+  border-radius: var(--border-radius-lg);
+}
+
+/* Card spacing improvements */
+.card {
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+@media (max-width: 768px) {
+  /* Improve home page content spacing */
+  .container {
+    padding: 12px;
+  }
+  
+  .card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Add more space between heading and content */
+  h1 + p, h2 + p {
+    margin-top: 10px;
+  }
+  
+  /* Fix the spacing for introduction section on home page */
+  h2.introduction-title {
+    margin-bottom: 15px;
+  }
+  
+  /* Better link spacing */
+  a.section-link {
+    margin-bottom: 10px;
+  }
+  
+  /* Adjust read more links */
+  a[href*="read-more"] {
+    margin-top: 15px;
+    display: inline-block;
+  }
+  
+  /* Ensure proper vertical spacing for home page sections */
+  .section-card {
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 }

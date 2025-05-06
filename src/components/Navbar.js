@@ -1,10 +1,23 @@
 "use client"
 
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Link from "next/link"
 
 export default function Navbar({ onMenuClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const handleMenuClick = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -16,8 +29,8 @@ export default function Navbar({ onMenuClick }) {
       <div className="navbar-container earthy-navbar-container">
         <div className="menu-toggle">
           <button onClick={handleMenuClick} className="menu-button">
-            <span className="sr-only">Open main menu</span>
             {isMenuOpen ? <X className="icon" /> : <Menu className="icon" />}
+            {isMobile && <span className="menu-text">Menu</span>}
           </button>
         </div>
 
@@ -26,12 +39,12 @@ export default function Navbar({ onMenuClick }) {
         </div>
 
         <div className="navbar-actions">
-          <a href="/team" className="btn btn-outline">
+          <Link href="/team" className="btn btn-outline">
             Team
-          </a>
-          <a href="/" className="btn btn-primary">
+          </Link>
+          <Link href="/" className="btn btn-primary">
             Home
-          </a>
+          </Link>
         </div>
       </div>
     </header>
