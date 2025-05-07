@@ -8,6 +8,7 @@
   justify-content: space-between;
   padding: 0 0 24px 0;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  transition: all 0.3s ease;
 }
 
 .creative-sidebar-header {
@@ -31,7 +32,8 @@
 }
 
 .creative-sidebar-logo:hover .creative-logo-icon {
-  transform: scale(1.08);
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
 }
 
 .logo-text {
@@ -49,6 +51,7 @@
 
 .nav-section {
   margin-bottom: 24px;
+  transition: all 0.3s ease;
 }
 
 .nav-section-title {
@@ -59,6 +62,12 @@
   letter-spacing: 0.05em;
   padding: 0 16px;
   margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-section:hover .nav-section-title {
+  transform: translateX(5px);
+  color: #2563eb;
 }
 
 .creative-nav-links {
@@ -69,6 +78,18 @@
 
 .creative-nav-item {
   margin-bottom: 4px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.creative-nav-item:hover {
+  transform: translateX(5px);
+}
+
+.creative-nav-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+  transform-origin: center;
 }
 
 .creative-nav-link {
@@ -81,7 +102,9 @@
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .creative-nav-link:hover,
@@ -90,26 +113,165 @@
   color: #2563eb;
 }
 
+.creative-nav-link:hover .creative-nav-icon,
+.creative-nav-link:focus .creative-nav-icon {
+  color: #2563eb;
+  transform: rotate(-15deg);
+}
+
+.creative-nav-link:active .creative-nav-icon {
+  transform: rotate(0deg);
+}
+
+.creative-nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.creative-nav-link:hover::before,
+.creative-nav-link:focus::before {
+  transform: translateX(0);
+}
+
 .creative-active-link {
   background: #dbeafe;
   color: #2563eb !important;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.creative-nav-icon {
-  font-size: 1.1rem;
-  transition: color 0.2s;
-}
-
-.creative-nav-link:hover .creative-nav-icon,
 .creative-active-link .creative-nav-icon {
+  color: #2563eb;
+  transform: rotate(-15deg);
+}
+
+.creative-active-link::before {
+  transform: translateX(0);
+  background: rgba(37, 99, 235, 0.15);
+}
+
+/* Add ripple effect */
+.creative-nav-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(37, 99, 235, 0.3);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.creative-nav-link:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(20, 20);
+    opacity: 0;
+  }
+}
+
+/* Add hover effect for the entire nav item */
+.creative-nav-item {
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.creative-nav-item:hover {
+  transform: translateX(5px);
+}
+
+/* Add subtle shadow effect on hover */
+.creative-nav-link:hover {
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+/* Add active state animation */
+.creative-nav-link:active {
+  transform: scale(0.98);
+}
+
+/* Add transition for the text */
+.creative-nav-text {
+  transition: transform 0.3s ease;
+}
+
+.creative-nav-link:hover .creative-nav-text {
+  transform: translateX(3px);
+}
+
+/* Add pulse animation for active items */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.creative-active-link {
+  animation: pulse 2s infinite;
+}
+
+/* Add smooth transition for the entire sidebar */
+.creative-sidebar {
+  transition: all 0.3s ease;
+}
+
+/* Add subtle background animation for active items */
+.creative-active-link {
+  background: linear-gradient(45deg, #dbeafe, #eff6ff);
+  background-size: 200% 200%;
+  animation: gradientBG 3s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Add hover effect for section titles */
+.nav-section-title {
+  transition: all 0.3s ease;
+}
+
+.nav-section:hover .nav-section-title {
+  transform: translateX(5px);
   color: #2563eb;
 }
 
-.creative-nav-text {
-  transition: color 0.2s;
+/* Add transition for the entire nav section */
+.nav-section {
+  transition: all 0.3s ease;
 }
 
+/* Add hover effect for the footer */
 .creative-sidebar-footer {
   padding: 20px 0 0 0;
   display: flex;
@@ -123,6 +285,14 @@
   padding: 12px 16px;
   box-shadow: 0 1px 4px 0 rgba(35, 41, 70, 0.04);
   text-align: center;
+  transition: all 0.3s ease;
+  width: 90%;
+}
+
+.creative-footer-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+  background: #e0e7ef;
 }
 
 .creative-footer-title {
@@ -130,12 +300,42 @@
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 2px;
+  letter-spacing: 0.3px;
 }
 
 .creative-footer-subtitle {
   color: #64748b;
   font-size: 0.8rem;
   font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Add mobile-specific animations */
+@media (max-width: 768px) {
+  .creative-nav-link:active {
+    transform: scale(0.95);
+  }
+  
+  .creative-nav-icon {
+    transition: transform 0.2s ease;
+  }
+  
+  .creative-nav-link:active .creative-nav-icon {
+    transform: rotate(-15deg) scale(0.9);
+  }
+  
+  .creative-footer-content {
+    width: 85%;
+    padding: 10px 14px;
+  }
+  
+  .creative-footer-title {
+    font-size: 0.85rem;
+  }
+  
+  .creative-footer-subtitle {
+    font-size: 0.75rem;
+  }
 }
 
 /* Mobile styles */
