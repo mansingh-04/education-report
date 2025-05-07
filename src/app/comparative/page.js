@@ -29,8 +29,8 @@ export default function ComparativeStats() {
         <div className="diagram-container">
           <div className="diagram-placeholder">
             <Image
-              src="/RuralVSUrban.png"
-              alt="Gender-wise Analysis"
+              src="/RuralVsUrban.png"
+              alt="Rural VS Urban (Internet Access)"
               width={800}
               height={400}
               style={{ objectFit: "contain" }}
