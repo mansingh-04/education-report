@@ -21,7 +21,7 @@ export default function Process() {
 
       <div className="card">
         <h2>Our Approach</h2>
-
+        <br></br>
         <div className="process-list">
           {processSteps.map((step, index) => (
             <div key={index} className="process-item">

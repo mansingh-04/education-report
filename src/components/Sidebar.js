@@ -2,7 +2,21 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, FileText, Network, Target, Repeat, BarChart3, Lightbulb, Users } from "lucide-react"
+import { 
+  Home, 
+  FileText, 
+  Network, 
+  Target, 
+  Repeat, 
+  BarChart3, 
+  Lightbulb, 
+  Users,
+  PieChart,
+  LineChart,
+  BarChart2,
+  BookOpen,
+  GitBranch
+} from "lucide-react"
 import styles from "./Sidebar.module.css"
 import { useState, useEffect } from "react"
 
@@ -21,17 +35,51 @@ export default function Sidebar({ isOpen, onClose }) {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  const navigation = [
-    { name: "Home", href: "/", icon: Home },
-    { name: "Introduction", href: "/introduction", icon: FileText },
-    { name: "Process", href: "/process", icon: FileText },
-    { name: "Causal Loop", href: "/causal-loop", icon: Network },
-    { name: "Leverage Points", href: "/leverage-points", icon: Target },
-    { name: "System Archetypes", href: "/archetypes", icon: Repeat },
-    { name: "Event-Pattern-Structure", href: "/event-pattern-structure", icon: BarChart3 },
-    { name: "Additional Insights", href: "/insights", icon: Lightbulb },
-    { name: "Team", href: "/team", icon: Users },
-  ]
+  const navigation = {
+    main: [
+      { name: "Home", href: "/", icon: Home },
+      { name: "Introduction", href: "/introduction", icon: FileText },
+      { name: "Process", href: "/process", icon: FileText },
+    ],
+    analysis: [
+      { name: "Event-Pattern-Structure", href: "/event-pattern-structure", icon: BookOpen },
+      { name: "Causal Loop", href: "/causal-loop", icon: GitBranch },
+      { name: "Leverage Points", href: "/leverage-points", icon: Lightbulb },
+    ],
+    visualizations: [
+      { name: "Data Trends", href: "/data-trends", icon: LineChart },
+      { name: "Distribution Analysis", href: "/distribution", icon: PieChart },
+      { name: "Comparative Stats", href: "/comparative", icon: BarChart2 },
+      { name: "System Diagrams", href: "/system-diagrams", icon: Network },
+    ],
+    other: [
+      { name: "References", href: "/insights", icon: Lightbulb },
+      { name: "Team", href: "/team", icon: Users },
+    ]
+  }
+
+  const renderNavSection = (items, sectionTitle) => (
+    <div className={styles["nav-section"]}>
+      {sectionTitle && <div className={styles["nav-section-title"]}>{sectionTitle}</div>}
+      <ul className={styles["creative-nav-links"]}>
+        {items.map((item) => {
+          const isActive = pathname === item.href
+          return (
+            <li key={item.name} className={styles["creative-nav-item"]}>
+              <Link
+                href={item.href}
+                className={`${styles["creative-nav-link"]}${isActive ? ` ${styles["creative-active-link"]}` : ""}`}
+                onClick={() => isMobile && onClose()}
+              >
+                <item.icon className={styles["creative-nav-icon"]} />
+                <span className={styles["creative-nav-text"]}>{item.name}</span>
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
 
   return (
     <>
@@ -49,23 +97,10 @@ export default function Sidebar({ isOpen, onClose }) {
           </Link>
         </div>
         <nav className={styles["creative-sidebar-nav"]}>
-          <ul className={styles["creative-nav-links"]}>
-            {navigation.map((item) => {
-              const isActive = pathname === item.href
-              return (
-                <li key={item.name} className={styles["creative-nav-item"]}>
-                  <Link
-                    href={item.href}
-                    className={`${styles["creative-nav-link"]}${isActive ? ` ${styles["creative-active-link"]}` : ""}`}
-                    onClick={() => isMobile && onClose()}
-                  >
-                    <item.icon className={styles["creative-nav-icon"]} />
-                    <span className={styles["creative-nav-text"]}>{item.name}</span>
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
+          {renderNavSection(navigation.main, "Main")}
+          {renderNavSection(navigation.analysis, "Analysis")}
+          {renderNavSection(navigation.visualizations, "Visualizations")}
+          {renderNavSection(navigation.other, "Other")}
         </nav>
         <footer className={styles["creative-sidebar-footer"]}>
           <div className={styles["creative-footer-content"]}>

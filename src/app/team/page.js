@@ -67,21 +67,6 @@ export default function TeamMembers() {
           </div>
         ))}
       </div>
-
-        <div className="card">
-          <h2>References</h2>
-          <p>List of all the data sources, reports, articles, tools, or APIs consulted during our research:</p>
-
-          <ol className="references-list">
-            <li>ASER Reports (Annual Status of Education Report)</li>
-            <li>PISA (Programme for International Student Assessment)</li>
-            <li>National Education Policy (NEP) 2020</li>
-            <li>UNESCO and UNICEF reports on EdTech in developing countries</li>
-            <li>Brookings Institution and World Bank research on the digital divide</li>
-            <li>Systems thinking tools such as Causal Loop Diagrams (CLDs)</li>
-            <li>Modeling tools like Vensim for systemic analysis</li>
-          </ol>
-        </div>
     </div>
   )
 }

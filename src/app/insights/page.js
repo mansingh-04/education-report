@@ -1,68 +1,59 @@
 import SectionHeader from "../../components/SectionHeader"
-import { Lightbulb } from "lucide-react"
+import { BookOpen, ExternalLink } from "lucide-react"
 
 export default function AdditionalInsights() {
-  const insights = [
+  const references = [
     {
-      title: "Digital Literacy Gap",
-      description:
-        "A significant divide exists in digital literacy between urban and rural educators and students, limiting effective technology use in rural classrooms.",
+      title: "ASER Reports (Annual Status of Education Report)",
+      url: "https://asercentre.org/"
     },
     {
-      title: "Parental and Community Involvement",
-      description:
-        "Low awareness among parents, especially in low-income households, hinders their ability to support digital learning at home.",
+      title: "PISA (Programme for International Student Assessment)",
+      url: "https://www.oecd.org/pisa/"
     },
     {
-      title: "Cultural and Linguistic Barriers",
-      description:
-        "The dominance of English-centric digital content reduces accessibility and engagement for students in rural and tribal regions.",
+      title: "National Education Policy (NEP) 2020",
+      url: "https://www.education.gov.in/en/national-education-policy-2020"
     },
     {
-      title: "Broader Societal Issues",
-      description:
-        "Factors like poverty and gender inequality limit the reach and impact of digital education, particularly for girls in rural areas.",
+      title: "UNESCO and UNICEF reports on EdTech in developing countries",
+      url: "https://www.unesco.org/en/education/digital"
     },
     {
-      title: "Intersection with Development Goals",
-      description:
-        "Digital education initiatives are deeply intertwined with broader goals like electrification, poverty reduction, and gender equity.",
+      title: "Brookings Institution and World Bank research on the digital divide",
+      url: "https://www.brookings.edu/topic/education/"
     },
+    {
+      title: "Systems thinking tools such as Causal Loop Diagrams (CLDs)",
+      url: "https://thesystemsthinker.com/causal-loop-construction-the-basics/"
+    },
+    {
+      title: "Modeling tools like Vensim for systemic analysis",
+      url: "https://vensim.com/"
+    }
   ]
 
   return (
     <div className="container">
       <SectionHeader
-        title="Additional Insights"
-        description="Other interesting findings and patterns from our research"
+        title="References"
+        description="List of all the data sources, reports, articles, tools, or APIs consulted during our research"
       />
 
-      <div className="card">
-        <h2>Key Discoveries</h2>
-
-        <div className="insights-grid">
-          {insights.map((insight, index) => (
-            <div key={index} className="insight-item">
-              <div className="insight-icon">
-                <Lightbulb className="icon-yellow" />
-              </div>
-              <div>
-                <h3>{insight.title}</h3>
-                <p>{insight.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="highlight-box indigo">
-          <h3>Emerging Questions</h3>
-          <p>Our analysis has raised several important questions for future research:</p>
-          <ul>
-            <li>How can digital literacy training be scaled equitably across regions?</li>
-            <li>What role can local communities play in sustaining digital learning initiatives?</li>
-            <li>How can educational content be better localized to improve relevance and accessibility?</li>
-          </ul>
-        </div>
+      <div className="references-list">
+        {references.map((ref, index) => (
+          <a 
+            key={index} 
+            href={ref.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="reference-item"
+          >
+            <span className="reference-number">{index + 1}.</span>
+            <span className="reference-title">{ref.title}</span>
+            <ExternalLink className="reference-icon" />
+          </a>
+        ))}
       </div>
     </div>
   )

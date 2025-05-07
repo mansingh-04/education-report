@@ -15,8 +15,9 @@ export default function Introduction() {
           <br /><br />
           However, despite improved access to digital infrastructure, learning outcomes have not shown a corresponding rise. Surveys such as ASER (Annual Status of Education Report) and NAS (National Achievement Survey) reveal that students continue to struggle with foundational skills like reading comprehension, basic mathematics, and conceptual clarity. This signals a critical gap between access to education technology and actual learning gains.
         </p>
-
+        <br></br>
         <h2>Importance in Indian Context</h2>
+       
         <p>
           India has the largest population of school-going children globally—over 250 million. The quality of education they receive will directly influence the nation’s social equity, economic productivity, and long-term development.
           <br /><br />
